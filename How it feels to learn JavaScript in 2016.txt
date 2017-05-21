@@ -1,429 +1,410 @@
-Hey, I got this new web project, but to be honest I haven’t coded much web in a few years and I’ve heard the landscape changed a bit. 
-You are the most up-to date web dev around here right?
+— Эй, я получил новый веб-проект, но, если честно, я не занимался веб-кодингом в течение нескольких лет, и я слышал, все немного поменялось.
+Ты же самый современный веб-разработчик, правда?
 
--The actual term is Front End engineer, but yeah, I’m the right guy. I do web in 2016. Visualisations, music players, flying drones that 
-play football, you name it. I just came back from JsConf and ReactConf, so I know the latest technologies to create web apps.
+— Это теперь называется Front-End инженер, но да, я — именно он. Я работаю с вебом в 2016. Визуализации, музыкальные плееры, 
+летающие дроны, которые играют в футбол, все что угодно. Я только что вернулся из JsConf и ReactConf, так что я знаю новейшие технологии 
+для создания веб-приложений.
 
-Cool. I need to create a page that displays the latest activity from the users, so I just need to get the data from the REST endpoint and 
-display it in some sort of filterable table, and update it if anything changes in the server. I was thinking maybe using jQuery to fetch 
-and display the data?
+— Круто. Мне нужно создать страницу, которая отображает последние действия со стороны пользователей, так что мне просто нужно получить данные
+от REST и отобразить их в какой-то фильтруемой таблице, ну и обновлять её, если что-то изменится на сервере. Я думал, может быть, 
+использовать JQuery для извлечения и отображения данных?
 
--Oh my god no, no one uses jQuery anymore. You should try learning React, it’s 2016.
+— О, Мой Бог! Нет! Никто больше не использует JQuery. Ты должен попробовать React: это — 2016!
 
-Oh, OK. What’s React?
+— Интересно. Что такое React?
 
--It’s a super cool library made by some guys at Facebook, it really brings control and performance to your application, by allowing you to 
-handle any view changes very easily.
+— Это — очень крутая библиотека, сделанная ребятами из Facebook. Она реально дает полный контроль и повышает производительность приложения,
+ позволяя очень легко обрабатывать любые изменения представлений.
 
-That sounds neat. Can I use React to display data from the server?
+— Звучит заманчиво. Могу ли я использовать React для отображения данных с сервера?
 
--Yeah, but first you need to add React and React DOM as a library in your webpage.
+— Ага, но сначала нужно добавить React и React DOM в виде библиотек.
 
-Wait, why two libraries?
+— Подожди, почему две библиотеки?
 
--So one is the actual library and the second one is for manipulating the DOM, which now you can describe in JSX.
+— Ну, одна — это сама библиотека, а вторая — для манипулирования DOM, который ты теперь можешь описать в JSX.
 
-JSX? What is JSX?
+— JSX? Что такое JSX?
 
--JSX is just a JavaScript syntax extension that looks pretty much like XML. It’s kind of another way to describe the DOM, think of it as a 
-better HTML.
+— JSX — это просто расширение синтаксиса JavaScript, который выглядит очень похоже на XML. Это своего рода еще один способ описать DOM. 
+Думай о нем, как об улучшенном HTML.
 
-What’s wrong with HTML?
+— Что случилось с HTML?
 
--It’s 2016. No one codes HTML directly anymore.
+— Это 2016. Никто больше не пишет на сыром HTML.
 
-Right. Anyway, if I add these two libraries then I can use React?
+— Ну хорошо. Если я добавляю эти две библиотеки, то я могу использовать React?
 
--Not quite. You need to add Babel, and then you are able to use React.
+— Не совсем. Нужно добавить Babel, а затем можно использовать React.
 
-Another library? What’s Babel?
+— Другая библиотека? Что за Babel?
 
--Oh, Babel is a transpiler that allows you to target specific versions of JavaScript, while you code in any version of JavaScript. You 
-don’t HAVE to include Babel to use ReactJS, but unless you do, you are stuck with using ES5, and let’s be real, it’s 2016, you should 
-be coding in ES2016+ like the rest of the cool kids do.
+— О, Babel — это транспайлер, он позволяет ориентироваться на конкретные версии JavaScript, в то время как пишешь код в любой версии JavaScript.
+Тебе не обязательно добавлять Babel для того, чтобы писать на ReactJS, но если ты это не сделаешь, то ты застрял с ES5, ну а это 2016, ты 
+должен кодить в ES2016+ как и все крутые чуваки.
 
-ES5? ES2016+? I’m getting lost over here. What’s ES5 and ES2016+?
+— ES5? ES2016+? Я потерялся. Что за ES5 и ES2016+?
 
--ES5 stands for ECMAScript 5. It’s the edition that has most people target since it has been implemented by most browsers nowadays.
+— ES5 означает ECMAScript 5. Это версия, на которую ориентируется большинство, поскольку она реализована в большинстве браузеров 
+на сегодняшний день.
 
-ECMAScript?
+— ECMAScript?
 
--Yes, you know, the scripting standard JavaScript was based on in 1999 after its initial release in 1995, back then when JavaScript was 
-named Livescript and only ran in the Netscape Navigator. That was very messy back then, but thankfully now things are very clear and we 
-have, like, 7 editions of this implementation.
+— Да, знаешь стандарт JavaScript, который был основан в 1999 году после его первоначального выпуска в 1995 году? Тогда, когда JavaScript 
+был назван LiveScript и только работал в Netscape Navigator. Это было очень запутано тогда, но, к счастью, теперь все ясно, и у нас есть
+7 версий этой реализации.
 
-7 editions. For real. And ES5 and ES2016+ are?
+— 7 версий. Серьезно. А ES5 и ES2016+ это?…
 
--The fifth and seventh edition respectively.
+ — Пятое и седьмое издание соответственно.
 
-Wait, what happened with the sixth?
+— Подожди, а что случилось с шестым?
 
--You mean ES6? Yeah, I mean, each edition is a superset of the previous one, so if you are using ES2016+, you are using all the features of 
-the previous versions.
+— ES6? Да, каждое издание является надстройкой предыдущего, так что если ты используешь ES2016+, то ты используешь все функции предыдущих 
+версий.
 
-Right. And why use ES2016+ over ES6 then?
+— Хорошо. А зачем использовать ES2016+ над ES6 тогда?
 
--Well, you COULD use ES6, but to use cool features like async and await, you need to use ES2016+. Otherwise you are stuck with ES6 
-generators with coroutines to block asynchronous calls for proper control flow.
+— Ну, ты можешь использовать ES6, но для интересных штук, типа async и await, тебе нужно использовать ES2016+. В противном случае ты 
+застрял с ES6 генераторами и сопрограммами для блокировки асинхронных вызовов и нормального управления потоком.
 
-I have no idea what you just said, and all these names are confusing. Look, I’m just loading a bunch of data from a server, I used to be 
-able to just include jQuery from a CDN and just get the data with AJAX calls, why can’t I just do that?
+— Я понятия не имею, что ты только что сказал, и все эти имена запутаны. Слушай, я просто хочу загрузить кучу данных с сервера, 
+просто подключить JQuery из CDN и просто получить данные с помощью AJAX. Почему я не могу сделать это?
 
--It’s 2016 man, no one uses jQuery anymore, it ends up in a bunch of spaghetti code. Everyone knows that.
+— Чувак, это 2016. Никто не использует JQuery больше, это заканчивается кучей запутанного кода. Все же это знают.
 
-Right. So my alternative is to load three libraries to fetch data and display a HTML table.
+— Ясно. Так что моя альтернатива — это загрузить три библиотеки для извлечения данных и отображения таблицы HTML.
 
--Well, you include those three libraries but bundle them up with a module manager to load only one file.
+— Ну, ты включаешь эти три библиотеки, но связываешь их с менеджером модулей, чтобы загрузить только один файл.
 
-I see. And what’s a module manager?
+— Понятно. А что за менеджер модулей?
 
--The definition depends on the environment, but in the web we usually mean anything that supports AMD or CommonJS modules.
+— Определение зависит от окружающей среды, но для веба мы обычно подразумеваем все, что поддерживает модули AMD или CommonJS.
 
-Riiight. And AMD and CommonJS are…?
+— Хорошооооо. А AMD и CommonJS это?…
 
--Definitions. There are ways to describe how multiple JavaScript libraries and classes should interact. You know, exports and requires? 
-You can write multiple JavaScript files defining the AMD or CommonJS API and you can use something like Browserify to bundle them up.
+ — Определения. Есть куча способов, чтобы описать, как несколько библиотек и классов JavaScript должны взаимодействовать. Ты можешь 
+написать несколько файлов JavaScript, определяющих API AMD или CommonJS, и использовать что-то вроде Browserify, чтобы связывать их.
 
-OK, that makes sense… I think. What is Browserify?
+— Хорошо, имеет смысл… наверное. А что такое Browserify?
 
--It’s a tool that allows you to bundle CommonJS described dependencies to files that can be run in the browser. It was created because most 
-people publish those dependencies in the npm registry.
+— Это инструмент, который позволяет связать CommonJS описанния зависимостей для файлов, которые могут быть запущены в браузере. Он был 
+создан, потому что большинство людей публикуют эти зависимости в NPM.
 
-npm registry?
+— NPM?
 
--It’s a very big public repository where smart people put code and dependencies as modules.
+— Это очень большое общественное хранилище, где умные люди постят код и зависимости в виде модулей.
 
-Like a CDN?
+— Как CDN?
 
--Not really. It’s more like a centralised database where anyone can publish and download libraries, so you can use them locally for 
-development and then upload them to a CDN if you want to.
+— На самом деле, нет. Это больше похоже на централизованную базу данных, где каждый желающий может опубликовать и скачать библиотеки, 
+так что ты можешь использовать их локально для разработки, а затем загрузить их на CDN, если захочешь.
 
-Oh, like Bower!
+— О, как Bower!
 
--Yes, but it’s 2016 now, no one uses Bower anymore.
+— Да, но это 2016, сейчас никто больше не использует Bower.
 
-Oh, I see… so I need to download the libraries from npm then?
+— Хм, ясно… так мне нужно загрузить библиотеки из NPM?
 
--Yes. So for instance, if you want to use React , you download the React module and import it in your code. You can do that for almost 
-every popular JavaScript library.
+— Да. Например, если ты хочешь использовать React, то загружаешь модуль React и импортируешь его в коде. Это можно сделать для почти 
+каждой популярной библиотеки JavaScript.
 
-Oh, like Angular!
+— О, это как в Angular!
 
--Angular is so 2015. But yes. Angular would be there, alongside VueJS or RxJS and other cool 2016 libraries. Want to learn about those?
+— Angular это слишком 2015. Но да. Angular тоже там есть, наряду с VueJS, RxJS и другими интересными библиотеками из 2016. Хочешь узнать о них?
 
-Let’s stick with React, I’m already learning too many things now. So, if I need to use React I fetch it from this npm and then use this 
-Browserify thing?
+— Давай придерживаться React, я уже узнал слишком много о нем. Так что, если мне нужно использовать React, я вытяну его из этого NPM, а 
+затем использую Browserify?
 
--Yes.
+— Да.
 
-That seems overly complicated to just grab a bunch of dependencies and tie them together.
+— Это кажется слишком сложным, чтобы просто взять кучу зависимостей и связать их вместе.
 
--It is, that’s why you use a task manager like Grunt or Gulp or Broccoli to automate running Browserify. Heck, you can even use Mimosa.
+— Ага, именно поэтому ты используешь менеджер задач, типа как Grunt или Gulp, или Broccoli для автоматизации запуска Browserify. Ты 
+даже можешь использовать Mimosa.
 
-Grunt? Gulp? Broccoli? Mimosa? The heck are we talking about now?
+— Grunt? Gulp? Broccoli? Mimosa? Черт возьми, о чём мы говорим сейчас?
 
--Task managers. But they are not cool anymore. We used them in like, 2015, then we used Makefiles, but now we wrap everything with Webpack.
+— Task менеджеры. Но они уже не такие крутые. Мы использовали их в стиле 2015 с Makefiles, но теперь мы перешли на Webpack.
 
-Makefiles? I thought that was mostly used on C or C++ projects.
+— Makefiles? Я думал, что в основном это используется для C или C++ проектов.
 
--Yeah, but apparently in the web we love making things complicated and then going back to the basics. We do that every year or so, just 
-wait for it, we are going to do assembly in the web in a year or two.
+— Ага, но, видимо, в вебе мы любим делать вещи сложными, а затем вернуться к основам. Мы делаем это типа каждый год. Ты подожди, через 
+год или два мы еще запилим сборки (assemblies) в вебе.
 
-Sigh. You mentioned something called Webpack?
+— Пффф. Ты упомянул что-то под названием Webpack?
 
--It’s another module manager for the browser while being kind of a task runner as well. It’s like a better version of Browserify.
+— Это другой менеджер модулей для браузера, в то же время он и своего рода Task менеджер. Это как улучшенная версия Browserify.
 
-Oh, Ok. Why is it better?
+— ОК. А почему он лучше?
 
--Well, maybe not better, it’s just more opinionated on how your dependencies should be tied. Webpack allows you to use different module 
-managers, and not only CommonJS ones, so for instance native ES6 supported modules.
+— Ну, может быть не лучше, но более гибкий в плане того, как зависимости связаны. Webpack позволяет использовать различные менеджеры 
+модулей, а не только CommonJS. Например, родные модули ES6.
 
-I’m extremely confused by this whole CommonJS/ES6 thing.
+— Я очень запутался в этих CommonJS/ES6.
 
--Everyone is, but you shouldn’t care anymore with SystemJS.
+— Да все в этом запутались, но можешь больше не париться, потому что есть SystemJS.
 
-Jesus christ, another noun-js. Ok, and what is this SystemJS?
+— О, Боже, опять что-то-JS. Хорошо, а что это за SystemJS?
 
--Well, unlike Browserify and Webpack 1.x, SystemJS is a dynamic module loader that allows you to tie multiple modules in multiple files 
-instead of bundling them in one big file.
+— Ну, в отличие от Browserify и WebPack 1.x, SystemJS представляет собой динамический модуль загрузчика, который позволяет связать
+ несколько модулей в нескольких файлах, а не связывая их в один большой файл.
 
-Wait, but I thought we wanted to build our libraries in one big file and load that!
+— Подожди, я думал, что мы хотели объединить наши библиотеки в один большой файл и загрузить его!
 
--Yes, but because HTTP/2 is coming now multiple HTTP requests are actually better.
+— Да, но из-за HTTP/2 несколько HTTP запросов на самом деле лучше.
 
-Wait, so can’t we just add the three original libraries for React??
+— Стоять! Так чего же мы не можем просто добавить три оригинальные библиотеки для React?
 
--Not really. I mean, you could add them as external scripts from a CDN, but you would still need to include Babel then.
+— Ты, конечно, можешь добавить их в качестве внешних скриптов с CDN, но все равно нужно будет добавить Babel.
 
-Sigh. And that is bad right?
+— Эх. И это плохо, не так ли?
 
--Yes, you would be including the entire babel-core, and it wouldn’t be efficient for production. On production you need to perform a series 
-of pre-tasks to get your project ready that make the ritual to summon Satan look like a boiled eggs recipe. You need to minify assets, 
-uglify them, inline css above the fold, defer scripts, as well as-
+— Да, придется включить полностью Babel-core, а это не будет эффективным для production. На production необходимо выполнить ряд
+предварительных задач, чтобы проект был полностью готов, а это ритуал, в сравнении с которым вызвать дьявола — это рецепт как сварить яйцо.
+Надо будет минимизировать файлы, сделать uglify, поиграться со стилями, подумать о загрузке скриптов…
 
-I got it, I got it. So if you wouldn’t include the libraries directly in a CDN, how would you do it?
+ — Понял, понял. Но если не скачивать библиотеки непосредственно с CDN, то как иначе?
 
--I would transpile it from Typescript using a Webpack + SystemJS + Babel combo.
+— Я бы сделал транспайл из TypeScript с помощью комбо Webpack + SystemJS + Babel.
 
-Typescript? I thought we were coding in JavaScript!
+— TypeScript? Я думал, что мы пишем код на JavaScript!
 
--Typescript IS JavaScript, or better put, a superset of JavaScript, more specifically JavaScript on version ES6. You know, that sixth 
-version we talked about before?
+— Typescript — это и есть JavaScript, или, лучше сказать, надмножество JavaScript. Более конкретно — JavaScript на версии ES6. Ну, та шестая 
+версия, о которой мы говорили.
 
-I thought ES2016+ was already a superset of ES6! WHY we need now this thing called Typescript?
+— Я думал, что ES2016+ — уже надмножество ES6! Почему нам сейчас нужен еще и TypeScript?
 
--Oh, because it allows us to use JavaScript as a typed language, and reduce run-time errors. It’s 2016, you should be adding some types to 
-your JavaScript code.
+— Потому что это позволяет нам использовать JavaScript как типизированный язык и уменьшить количество ошибок во время выполнения. Это 2016, 
+надо добавить некоторые типы в код на JavaScript.
 
-And Typescript obviously does that.
+— И TypeScript, очевидно, делает это.
 
--Flow as well, although it only checks for typing while Typescript is a superset of JavaScript which needs to be compiled.
+— И Flow, хотя он проверяет только типы, в то время как TypeScript является надстройкой JavaScript, который нужно скомпилировать.
 
-Sigh… and Flow is?
+— Эээ… и Flow?
 
--It’s a static type checker made by some guys at Facebook. They coded it in OCaml, because functional programming is awesome.
+— Это — инструмент для проверки статической типизации, сделанный парнями из Facebook. Они написали его на OCaml, так как функциональное 
+программирование является удивительно крутым.
 
-OCaml? Functional programming?
+— OCaml? Функциональное программирование?
 
--It’s what the cool kids use nowadays man, you know, 2016? Functional programming? High order functions? Currying? Pure functions?
+— Ну это то, что сегодня юзают крутые пацаны, ну типа, знаешь, 2016. Функциональное программирование. Функции высокого порядка. Currying. 
+Pure функции.
 
-I have no idea what you just said.
+— Я понятия не имею, что это.
 
--No one does at the beginning. Look, you just need to know that functional programming is better than OOP and that’s what we should be 
-using in 2016.
+— Никто не понимает, в начале. Надо просто знать, что функциональное программирование лучше, чем объектно-ориентированное программирование,
+и это то, что мы должны использовать в 2016 году.
 
-Wait, I learned OOP in college, I thought that was good?
+— Подожди, я учил ООП в универе, я думал, что это круто?
 
--So was Java before being bought by Oracle. I mean, OOP was good back in the days, and it still has its uses today, but now everyone is 
-realising modifying states is equivalent to kicking babies, so now everyone is moving to immutable objects and functional programming. 
-Haskell guys had been calling it for years, -and don’t get me started with the Elm guys- but luckily in the web now we have libraries like 
-Ramda that allow us to use functional programming in plain JavaScript.
+— Ну так было пока Oracle не купил Java. Я имею в виду, что ООП был хорош раньше, и его используют до сих пор, но теперь каждый понимает, 
+что манипулировать состояниями эквивалентно пинанию младенцев, так что теперь все движется к immutable объектам и функциональному
+программированию. Ребята из Haskell уже 100 лет кричат об этом, и это я еще не упоминал Elm. Но, к счастью, в сети теперь у нас есть 
+такие библиотеки, как Ramda, которые позволяют нам использовать функциональное программирование на простом JavaScript.
 
-Are you just dropping names for the sake of it? What the hell is Ramnda?
+— Ты что, просто придумываешь имена? Что еще за Ramnda?
 
--No. Ramda. Like Lambda. You know, that David Chambers’ library?
+— Нет. Ramda. Как и Lambda. Ну, знаешь, библиотека Дэвида Чембера?
 
-David who?
+— Дэвида кого?
 
--David Chambers. Cool guy. Plays a mean Coup game. One of the contributors for Ramda. You should also check Erik Meijer if you are serious 
-about learning functional programming.
+— Дэвида Чембера. Крутой чел. Один из авторов Ramda. Глянь еще работы Эрика Мейера, если серьезно относишься к изучению функционального
+ программирования.
 
-And Erik Meijer is…?
+— А Эрик Мейер это?…
 
--Functional programming guy as well. Awesome guy. He has a bunch of presentations where he trashes Agile while using this weird coloured 
-shirt. You should also check some of the stuff from Tj, Jash Kenas, Sindre Sorhus, Paul Irish, Addy Osmani-
+ — Тоже функциональщик. Крутой чел. У него есть куча презентаций, где он в странной цветной футболке громит Agile. Еще глянь что делают 
+ Tj, Jash Kenas, Sindre Sorhus, Paul Irish, Addy Osmani…
 
-Ok. I’m going to stop you there. All that is good and fine, but I think all that is just so complicated and unnecessary for just fetching 
-data and displaying it. I’m pretty sure I don’t need to know these people or learn all those things to create a table with dynamic data. 
-Let’s get back to React. How can I fetch the data from the server with React?
+ — ОК. Притормози. Все это хорошо и прекрасно, но я думаю, что все это слишком сложно и ненужно для простой выборки данных и их отображения.
+Я уверен, что я не должен знать этих людей или все эти вещи, чтобы создать таблицу с динамическими данными. Давай вернемся к React. Как 
+я могу извлечь данные с сервера в React?
 
--Well, you actually don’t fetch the data with React, you just display the data with React.
+— Ну, на самом деле для выборки данных не надо React, он отображает данные.
 
-Oh, damn me. So what do you use to fetch the data?
+— О, черт. Так а что используется для выборки данных?
 
--You use Fetch to fetch the data from the server.
+— Используй Fetch для получения данных с сервера.
 
-I’m sorry? You use Fetch to fetch the data? Whoever is naming those things needs a thesaurus.
+— Использовать Fetch для выборки данных? Тот, кто называет эти вещи, нуждается в тезаурусе.
 
--I know right? Fetch it’s the name of the native implementation for performing XMLHttpRequests against a server.
+— О, да. Fetch это имя нативной реализации для выполнения XMLHttpRequests.
 
-Oh, so AJAX.
+— О, AJAX.
 
--AJAX is just the use of XMLHttpRequests. But sure. Fetch allows you to do AJAX based in promises, which then you can resolve to avoid the 
+— AJAX это просто запросы XMLHttpRequest. А Fetch позволяет делать AJAX на основе промисов, которые затем можно резолвить, чтобы избежать 
 callback hell.
 
-Callback hell?
+— Callback hell?
 
--Yeah. Every time you perform an asynchronous request against the server, you need to wait for its response, which then makes you to add a 
-function within a function, which is called the callback pyramid from hell.
+— Да. Каждый раз, когда выполняется асинхронный запрос, ты должен ждать его ответа, который заставляет добавить функцию внутри 
+функции, которая называется пирамида callback hell.
 
-Oh, Ok. And this promise thing solves it?
+— О, хорошо. А промисы решают эту проблему?
 
--Indeed. By manipulating your callbacks through promises, you can write easier to understand code, mock and test them, as well as perform 
-simultaneous requests at once and wait until all of them are loaded.
+— Еще бы! Манипулируя коллбеками через промисы, ты можешь писать более понятный код, тестировать его, а также выполнять несколько одновременных
+запросов одновременно и ждать, пока все они отработают.
 
-And that can be done with Fetch?
+— И это можно сделать с помощью Fetch?
 
--Yes, but only if your user uses an evergreen browser, otherwise you need to include a Fetch polyfill or use Request, Bluebird or Axios.
+— Да, но только в некоторых браузерах, в противном случае необходимо включить Fetch polyfill или использовать Request, Bluebird или 
+Axios.
 
-How many libraries do I need to know for god’s sake? How many are of them?
+— Сколько библиотек мне нужно знать, ради бога? Сколько из них?
 
--It’s JavaScript. There has to be thousands of libraries that all do the same thing. We know libraries, in fact, we have the best libraries. 
-Our libraries are huuuge, and sometimes we include pictures of Guy Fieri in them.
+— Это JavaScript. Тут тысячи библиотек, которые делают одно и то же. Мы знаем эти библиотеки. Наши библиотеки огрооооомные, а иногда мы
+добавляем картинки с Guy Fieri в них.
 
-Did you just say Guy Fieri? Let’s get this over with. What these Bluebird, Request, Axios libraries do?
+— Guy Fieri? Давай покончим с этим. Что эти Bluebird, Request и Axios делают?
 
--They are libraries to perform XMLHttpRequests that return promises.
+— Это библиотеки для выполнения XMLHttpRequests, которые возвращают промисы.
 
-Didn’t jQuery’s AJAX method start to return promises as well?
+— А методы AJAX JQuery не возвращают промисы?
 
--We don’t use the “J” word in 2016 anymore. Just use Fetch, and polyfill it when it’s not in a browser or use Bluebird, Request or Axios 
-instead. Then manage the promise with await within an async function and boom, you have proper control flow.
+— Мы больше не используем «J» в 2016. Просто используйте Fetch polyfill или Bluebird, Request или Axios. Затем управляй промисами с 
+async, await и Бац!, у тебя правильный поток управления.
 
-It’s the third time you mention await but I have no idea what it is.
+— Это третий раз, когда ты говоришь о await, но я понятия не имею, что это такое.
 
--Await allows you to block an asynchronous call, allowing you to have better control on when the data is being fetch and overall increasing 
-code readability. It’s awesome, you just need to make sure you add the stage-3 preset in Babel, or use syntax-async-functions and 
-transform-async-to-generator plugin.
+— Await позволяет блокировать асинхронный вызов, что позволяет лучше все контролировать во время получения данных и увеличивает читаемость
+ кода. Это потрясающе, просто нужно, чтобы убедиться, что ты добавил stage-3 в Babel, или использовать синтаксис асинхронных 
+ функций и плагин transform-async-to-generator.
 
-This is insane.
+— Это безумие.
 
--No, insane is the fact you need to precompile Typescript code and then transpile it with Babel to use await.
+— Нет, безумие — что нужно перекомпилировать код TypeScript, а затем транспайлить его с Babel, чтобы использовать await.
 
-Wat? It’s not included in Typescript?
+— Шта!? Это не входит в TypeScript?
 
--It does in the next version, but as of version 1.7 it only targets ES6, so if you want to use await in the browser, first you need to 
-compile your Typescript code targeting ES6 and then Babel that shit up to target ES5.
+— Входит в следующей версии, но в версии 1.7 он только ES6, так что если хочешь использовать await в браузере, сначала нужно скомпилировать
+код TypeScript в ES6, а затем транспайлить с Babel в ES5.
 
-At this point I don’t know what to say.
+— Я не знаю, что сказать.
 
--Look, it’s easy. Code everything in Typescript. All modules that use Fetch compile them to target ES6, transpile them with Babel on a 
-stage-3 preset, and load them with SystemJS. If you don’t have Fetch, polyfill it, or use Bluebird, Request or Axios, and handle all 
-your promises with await.
+— Слушай, это легко. Пиши весь код в TypeScript. Все модули, использующие Fetch компилируй в ES6, транспайль их с Babel с stage-3, и 
+загружай с SystemJS. Если у тебя нет Fetch, используй polyfill, или Bluebird, Request или Axios, и обрабатывай промисы с await.
 
-We have very different definitions of easy. So, with that ritual I finally fetched the data and now I can display it with React right?
+— У нас очень разные определения «легко». Так, с этим ритуалом я, наконец, получил данные и теперь я могу показать их с помощью React правильно?
 
--Is your application going to handle any state changes?
+— А приложение будет обрабатывать любые изменения состояния?
 
-Err, I don’t think so. I just need to display the data.
+— Грр, я не думаю. Мне просто нужно отобразить данные.
 
--Oh, thank god. Otherwise I would had to explain you Flux, and implementations like Flummox, Alt, Fluxible. Although to be honest you 
-should be using Redux.
+— О, слава богу. В противном случае мне пришлось бы объяснить Flux и реализации, такие как Flummox, Alt, Fluxible. Хотя, если быть честным
+ты должен использовать Redux.
 
-I’m going to just fly over those names. Again, I just need to display data.
+— Как же достали эти имена. Опять же, мне просто нужно отобразить данные.
 
--Oh, if you are just displaying the data you didn’t need React to begin with. You would had been fine with a templating engine.
+— А, если просто отобразить данные, не надо начинать с React. Можно взять движок шаблонов.
 
-Are you kidding me? Do you think this is funny? Is that how you treat your loved ones?
+— Ты шутишь, что ли? Думаешь, это смешно?
 
--I was just explaining what you could use.
+— Да я просто объяснил, что ты мог бы использовать.
 
-Stop. Just stop.
+— Стоп. Просто остановись.
 
--I mean, even if it’s just using templating engine, I would still use a Typescript + SystemJS + Babel combo if I were you.
+— Я имею в виду, даже если просто использовать шаблонизатор, я бы все равно использовал комбо TypeScript + SystemJS + Babel на твоем 
+месте.
 
-I need to display data on a page, not perform Sub Zero’s original MK fatality. Just tell me what templating engine to use and I’ll take it 
-from there.
+— Мне нужно отобразить данные на странице, а не выполнить оригинальный фаталити Sub Zero из Мортал Комбат. Просто скажи мне, какой движок 
+шаблонов использовать.
 
--There’s a lot, which one you are familiar with?
+— Их много, с каким ты знаком?
 
-Ugh, can’t remember the name. It was a long time ago.
+— Уф, не могу вспомнить название. Это было давно.
 
--jTemplates? jQote? PURE?
+— jTemplates? jQote? PURE?
 
-Err, doesn’t ring a bell. Another one?
+— Не то. Еще один?
 
--Transparency? JSRender? MarkupJS? KnockoutJS? That one had two-way binding.
+— Transparency? JSRender? MarkupJS? KnockoutJS?
 
-Another one?
+— Другой
 
--PlatesJS? jQuery-tmpl? Handlebars? Some people still use it.
+— PlatesJS? JQuery-tmpl? Handlebars? Некоторые люди до сих пор используют его.
 
-Maybe. Are there similar to that last one?
+— Может быть. А есть что-то похожее на последний?
 
--Mustache, underscore? I think now even lodash has one to be honest, but those are kind of 2014.
+— Mustache, underscore? Я думаю, что теперь даже у lodash есть шаблонизатор, но это своего рода 2014.
 
-Err.. maybe it was newer.
+— Грр… возможно он был поновее.
 
--Jade? DustJS?
+— Jade? DustJS?
 
-No.
+— Нет.
 
--DotJS? EJS?
+— DotJS? EJS?
 
-No.
+— Нет.
 
--Nunjucks? ECT?
+— Nunjucks? ЕСТ?
 
-No.
+— Нет.
 
--Mah, no one likes Coffeescript syntax anyway. Jade?
+— Чувак, никто не любит синтаксис CoffeeScript в любом случае. Jade?
 
-No, you already said Jade.
+— Нет, ты уже сказал Jade.
 
--I meant Pug. I meant Jade. I mean, Jade is now Pug.
+— Ну я имел в виду Pug. Я имел в виду Jade. Я имею в виду, Jade теперь Pug.
 
-Sigh. No. Can’t remember. Which one would you use?
+— Пф. Нет. Не помню. Какой из них ты бы использовал?
 
--Probably just ES6 native template strings.
+— Наверное, нативный ES6 template strings.
 
-Let me guess. And that requires ES6.
+— Дай угадаю. Это требует ES6.
 
--Correct.
+— Да.
 
-Which, depending on what browser I’m using needs Babel.
+— Который, в зависимости от того, какой браузер я использую требует Babel.
 
--Correct.
+— Да.
 
-Which, if I want to include without adding the entire core library, I need to load it as a module from npm.
+— Который, если я хочу включить без добавления всей библиотеки, нужно, загрузить в качестве модуля NPM.
 
--Correct.
+— Да.
 
-Which, requires Browserify, or Wepback, or most likely that other thing called SystemJS.
+— Который, требует Browserify или Wepback, или, скорее всего, SystemJS.
 
--Correct.
+— Да.
 
-Which, unless it’s Webpack, ideally should be managed by a task runner.
+— Который, если это не Webpack, в идеале должен управляться Task runner-ом.
 
--Correct.
+— Да.
 
-But, since I should be using functional programming and typed languages I first need to pre-compile Typescript or add this Flow thingy.
+— Но, так как я должен использовать функциональное программирование и типизированные языки, я в первую очередь должен предварительно
+скомпилировать TypeScript или добавить этот Flow.
 
--Correct.
+— Да.
 
-And then send that to Babel if I want to use await.
+— А потом отправить это на обработку в Babel, если я хочу использовать await.
 
--Correct.
+— Да.
 
-So I can then use Fetch, promises, and control flow and all that magic.
+— Так что я могу затем использовать Fetch, промисы и управление потоком и всю эту магию.
 
--Just don’t forget to polyfill Fetch if it’s not supported, Safari still can’t handle it.
+— Только не забудь polyfill Fetch, если он не поддерживается, Safari до сих пор не может справиться с этим.
 
-You know what. I think we are done here. Actually, I think I’m done. I’m done with the web, I’m done with JavaScript altogether.
+— Знаешь что. Я думаю, мы закончим здесь. На самом деле, я думаю, я закончил. Я закончил с этим вебом и с JavaScript в целом.
 
--That’s fine, in a few years we all are going to be coding in Elm or WebAssembly.
+— Хорошо, через несколько лет мы все будем кодить в Elm или WebAssembly.
 
-I’m just going to move back to the backend. I just can’t handle these many changes and versions and editions and compilers and transpilers. 
-The JavaScript community is insane if it thinks anyone can keep up with this.
+— Я просто хочу вернуться к бэкэнду. Я не могу справиться со всеми этими изменениями, версиями, изданиями, компиляторами и транспайлерами.
+Сообщество JavaScript безумно, если оно думает, что кто-то может идти в ногу с этим.
 
--I hear you. You should try the Python community then.
+— Понятно. Тебе тогда надо попробовать сообщество Python.
 
-Why?
+— Почему?
 
--Ever heard of Python 3?
+— Слышал о Python 3?
 
-
-<https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f>
+<https://habrahabr.ru/post/312022/>
 
 ===================================================================================================
 
-Comments:
-
-Addy Osmani
-Oct 4, 2016
-
-Totally get your frustration :)
-
-I encourage folks to adopt this approach to keeping up with the JavaScript ecosystem: first do it, then do it right, then do it better.
-
-First do it: Take a breath and acknowledge that you’re totally new to a space. It’s okay not to use everything. In fact, it’s better if 
-you don’t. Get a simple prototype built that does the trick. Nothing wrong with straight-up using HTML/CSS/JS.
-
-We don’t acknowledge enough that it takes time, experimentation and skill to master the fundamentals of any new topic. Beginners shouldn’t 
-feel like they’re failing if they’re not using the library-du-jour or reactive-pattern of the week. It took me weeks to get Babel and React
-right. Longer to get Isomorphic JS, WebPack and all of the other libraries around it right. Start simple and build on that base.
-
-Then do it right: Iterate. Improve on what you’ve got. See a problem that you keep having to solve? Maybe layer in a small library/module
-to help with it. There is zero reason to be worrying about rewriting your project in another language or framework nor adopting any more
-tooling unless it helps you move the needle forward on your project. Everything you add to your project should really be offering 
-value. If it’s complicating things or making it harder for you or your team to get a job done, get rid of it.
-
-Then do it better: master your craft. Once you’re comfortable navigating the waters of the tools and libraries you know for sure add 
-value to your workflow, you’ll find that including them as a default “just make sense”. I’m heavily using 9–10 different tools in my
-project these days but I’ve learned enough about how to avoid their rough edges that they save me time. I would never suggest a 
-beginner use most of the things in this post right off the bat. It’s a recipe for pain. Instead, get the basics right. Slowly become
-familiar with tools that add value and then use what helps you get and stay effective.
-
-It’s also worth noting: everyone—even the people writing the tools and libraries mentioned in this post—go through the same feelings
-of fatigue and frustration learning, debugging and staying up to date with modern JavaScript. I’d encourage folks to remember we’re
- all in the same boat and our tools are here to help us. If they’re not doing that, we should get them out of the way :)
+SPAHI4
+10 октября 2016 в 08:22   
+ 
+Не понимаю, в чем сложность проблемы, описываемой в статье. Взять первый попавшийся webpack boilerplate, использовать первую 
+попавшуюся библиотеку для отображения данных, хоть es6 template strings, и подключить для старых браузеров whatwg-fetch. Все. 
